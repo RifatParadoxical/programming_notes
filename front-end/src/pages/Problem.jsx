@@ -1,6 +1,4 @@
-
-
-const Problem = () => {
+function Problem(){
   return (
     <div>Problem</div>
   )

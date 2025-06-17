@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useState, useContext } from "react";
+import { NavLink } from "react-router-dom";
+import {Context} from '../Context/Context'
 
 function Header() {
 
     const [visible, setVisible] = useState(false);
+    const {theme,setTheme} = useContext(Context)
 
     return (
-        <header className=" text-black py-4">
+        <header className="text-black py-4">
             <div className="container flex justify-between items-center">
-                <h1 className=" ml-3 text-[#83c314] text-2xl font-bold cursor-pointer">Programming Notes</h1>
+                <img src="/logo.webp" alt="Programming Notes" className="max-h-7 hover:scale-105 ease-in-out duration-300 ml-3 cursor-pointer"/>
+                
                 <nav className="italic hidden sm:block space-x-4">
                     <NavLink to="/" >Home</NavLink>
                     <NavLink to="/courses" >Courses</NavLink>

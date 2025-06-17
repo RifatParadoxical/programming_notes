@@ -1,6 +1,4 @@
-
-
-const HowTo = () => {
+function HowTo(){
   return (
     <div>HowTo</div>
   )
